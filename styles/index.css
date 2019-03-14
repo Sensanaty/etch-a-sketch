@@ -1,17 +1,56 @@
-#tabletContainer {
-    overflow: hidden;
-    margin:-1%;
-    padding:20px;
+body {
+  background-color: #222219;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.tabletSquare {
-    display: grid;
-    box-sizing: border-box;
-    float: left;
-    width: 50px;
-    height: 50px;
-    margin: 0.5px;
-    padding: 0.5px;
-    border: 1px solid #404040;
-    text-align: 
+#header h1 {
+  color: #F9C80E;
 }
+
+#bodyWrapper {
+  display: flex;
+  flex-flow: row wrap;
+  overflow: hidden;
+}
+
+#header {
+  flex: 1 100%;
+  align-self: baseline;
+  text-align: center;
+}
+
+#sketchButtons {
+  flex: 1;
+  max-width: 150px;
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 15px;
+  margin: 5px;
+}
+
+.appButtons {
+  padding: 10px 5px;
+  margin: 5px;
+  border-radius: 15px;
+  outline: none;
+  background-color: #424729;
+  color: white;
+  border: none;
+  cursor: pointer;
+  
+}
+
+.appButtons:hover {
+  background-color: white;
+  color: #424729;
+}
+
+.appButtons:active {
+  transform: translateY(4px);
+}
+
+#tabletContainer {
+  
+}
+
+/*# sourceMappingURL=index.css.map */

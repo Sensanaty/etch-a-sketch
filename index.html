@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Etch-A-Sketch | Luka S.</title>
     <meta charset="UTF-8">
@@ -9,7 +10,8 @@
     <link rel="stylesheet" href="styles/normalize.css" type="text/css">
     <!-- First link will normalize the CSS, the 2nd will overwrite whatever changes were made in favour of the specfied ones -->
     <link rel="stylesheet" href="styles/index.css" type="text/css">
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 
 <body>
@@ -18,16 +20,13 @@
             <h1>Etch-A-Sketch!</h1>
         </div>
         <div id="sketchButtons">
-            <button id="clearButton">Reset the Grid</button>
-            <button id="rainbowButton">Random Colors</button>
-            <button id="blackButton">Default Colors</button>
+            <button class="appButtons" id="rainbowButton">Random Colors</button>
+            <button class="appButtons" id="clearButton">Reset the Grid</button>
+            <button class="appButtons" id="blackButton">Default Colors</button>
         </div>
         <!-- Drawing board gets targeted here -->
         <div id="tabletContainer">
-            <div class="tabletSquare">1</div>
-            <div class="tabletSquare">2</div>
-            <div class="tabletSquare">3</div>
-            <div class="tabletSquare">4</div>
+
         </div>
     </div>
     <script src="js/app.js"></script>
