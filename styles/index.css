@@ -62,7 +62,7 @@ body {
   right: 0;
   top: 100px;
 }
-
+/* TODO: Maybe change this to Grid? */
 .tabletCanvas {
   box-sizing: border-box;
   text-align: center;
