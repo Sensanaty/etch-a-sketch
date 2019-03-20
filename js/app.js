@@ -116,4 +116,4 @@ blackButton.addEventListener('click', function () {
 var eraseButton = document.querySelector('#eraseButton');
 eraseButton.addEventListener('click', function () {
     eraser();
-})
+});
