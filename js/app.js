@@ -66,8 +66,8 @@ function eraser() {
     drawing.forEach((div) => {
         div.addEventListener('mouseover', function(e) {
             e.target.setAttribute('style', 'background-color: white;');
-        })
-    })
+        });
+    });
 }
 
 /**
