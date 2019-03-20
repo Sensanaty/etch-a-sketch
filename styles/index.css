@@ -5,8 +5,11 @@ body {
 
 #header {
   padding-left: 180px;
-  flex: 1 100%;
-  align-self: baseline;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 100%;
+          flex: 1 100%;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
   text-align: center;
 }
 
@@ -15,16 +18,28 @@ body {
 }
 
 #bodyWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
   overflow: hidden;
 }
 
 #sketchButtons {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   max-width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   padding: 15px;
   margin: 5px;
 }
@@ -46,7 +61,8 @@ body {
 }
 
 .appButtons:active {
-  transform: translateY(4px);
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
 }
 
 #tabletContainer {
