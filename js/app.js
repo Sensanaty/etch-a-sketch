@@ -5,7 +5,7 @@ const tablet = document.querySelector("#tabletContainer")
  * Wait for DOM elements to load, then draw canvas of size 16x16.
  * @see blackOut() Enables drawing on the grid on DOM load.
  */
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
     drawGrid(16, 256);
     blackOut();
 });
@@ -40,7 +40,7 @@ function removeGrid() {
 function blackOut() {
     let drawing = document.querySelectorAll(".tabletCanvas");
     drawing.forEach((div) => {
-        div.addEventListener('mouseover', function(e) {
+        div.addEventListener('mouseover', function (e) {
             e.target.setAttribute('style', 'background-color: black;');
         });
     });
@@ -52,7 +52,7 @@ function blackOut() {
 function rainbowOut() {
     let drawing = document.querySelectorAll(".tabletCanvas");
     drawing.forEach((div) => {
-        div.addEventListener('mouseover', function(e) {
+        div.addEventListener('mouseover', function (e) {
             e.target.setAttribute('style', `background-color: ${randomColors()};`);
         });
     });
@@ -64,7 +64,7 @@ function rainbowOut() {
 function eraser() {
     let drawing = document.querySelectorAll(".tabletCanvas");
     drawing.forEach((div) => {
-        div.addEventListener('mouseover', function(e) {
+        div.addEventListener('mouseover', function (e) {
             e.target.setAttribute('style', 'background-color: white;');
         });
     });
@@ -77,7 +77,7 @@ function randomColors() {
     let red = Math.floor(Math.random() * 256);
     let green = Math.floor(Math.random() * 256);
     let blue = Math.floor(Math.random() * 256);
-    return(`rgb( ${red}, ${green}, ${blue});`);
+    return (`rgb( ${red}, ${green}, ${blue});`);
 }
 
 // Buttons //
@@ -86,32 +86,34 @@ function randomColors() {
  * Clear the drawing field when button is clicked and prompt the user for the size of the next canvas
  */
 var clearButton = document.querySelector('#clearButton'); /** Set event listener for the reset button */
- clearButton.addEventListener('click', function() {
-     var gridPrompt = prompt('How large would you like your new grid to be? One side is enough');
-     if (gridPrompt === null) {return;}
-     var gridTotal = gridPrompt * gridPrompt;
-     removeGrid();
-     drawGrid(gridPrompt, gridTotal);
-     blackOut();
- });
+clearButton.addEventListener('click', function () {
+    var gridPrompt = prompt('How large would you like your new grid to be? One side is enough');
+    if (gridPrompt === null) {
+        return;
+    }
+    var gridTotal = gridPrompt * gridPrompt;
+    removeGrid();
+    drawGrid(gridPrompt, gridTotal);
+    blackOut();
+});
 
- /**
-  * On button press, change the hover color from black to random RGB values.
-  */
+/**
+ * On button press, change the hover color from black to random RGB values.
+ */
 var rainbowButton = document.querySelector('#rainbowButton');
- rainbowButton.addEventListener('click', function() {
-     rainbowOut();
- });
+rainbowButton.addEventListener('click', function () {
+    rainbowOut();
+});
 
 /**
  * On button press, change the hover color from whatever it is currently, back to black.
  */
 var blackButton = document.querySelector('#blackButton');
- blackButton.addEventListener('click', function() {
-     blackOut();
- });
+blackButton.addEventListener('click', function () {
+    blackOut();
+});
 
 var eraseButton = document.querySelector('#eraseButton');
- eraseButton.addEventListener('click', function() {
-     eraser();
- })
+eraseButton.addEventListener('click', function () {
+    eraser();
+})
