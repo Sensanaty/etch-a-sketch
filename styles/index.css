@@ -4,7 +4,7 @@ body {
 }
 
 #header {
-  padding-left: 20px;
+  padding-left: 180px;
   flex: 1 100%;
   align-self: baseline;
   text-align: center;
@@ -19,7 +19,6 @@ body {
   flex-flow: row wrap;
   overflow: hidden;
 }
-
 
 #sketchButtons {
   flex: 1;
@@ -51,26 +50,17 @@ body {
 }
 
 #tabletContainer {
-  position: absolute;
-  padding: 5px;
+  display: grid;
+  padding: 1px;
+  width: 800px;
+  height: 800px;
   max-width: 800px;
   min-height: 800px;
-  display: flex;
-  flex-flow: row wrap;
   margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 100px;
+  border: 10px solid red;
 }
-/* TODO: Maybe change this to Grid? */
+
 .tabletCanvas {
-  box-sizing: border-box;
-  text-align: center;
-  float: left;
-  min-width: 50px;
-  min-height: 50px;
-  margin: 0;
-  padding: 0;
-  border: 1px solid #404040;
-  background: white;
+  border: 1px solid black;
+  background-color: white;
 }
